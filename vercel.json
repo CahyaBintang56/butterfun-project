@@ -12,8 +12,5 @@
     { "src": "/generate-image.html", "dest": "/src/generate-image.html" },
     { "src": "/", "dest": "/src/index.html" },
     { "src": "/(.*\\.(css|js|png|jpg|jpeg|gif|svg|ico))", "dest": "/src/$1" }
-  ],
-  "env": {
-    "GEMINI_API_KEY": "@gemini_api_key"
-  }
+  ]
 }
