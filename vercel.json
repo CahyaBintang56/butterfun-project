@@ -3,6 +3,7 @@
   "builds": [{ "src": "api/*.js", "use": "@vercel/node" }],
   "routes": [
     { "src": "/generate-image", "dest": "api/generate-image.js" },
-    { "src": "/", "dest": "/index.html" }
+    { "src": "/generate-image.html", "dest": "src/generate-image.html" },
+    { "src": "/", "dest": "src/index.html" }
   ]
 }
