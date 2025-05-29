@@ -31,13 +31,10 @@ export default async function handler(req, res) {
 
     console.log("Calling Gemini API...");
 
-    // Call Gemini API dengan format yang sama seperti lokal
+    // Use the same format as the working local version
     const response = await ai.models.generateContent({
       model: "gemini-2.0-flash-preview-image-generation",
-      contents: [{
-        role: "user",
-        parts: [{ text: prompt }]
-      }],
+      contents: prompt, // Pass prompt directly like in local version
       config: {
         responseModalities: [Modality.TEXT, Modality.IMAGE],
       },
@@ -60,19 +57,19 @@ export default async function handler(req, res) {
 
     console.log("Processing response parts:", candidate.content.parts.length);
 
-    // Loop untuk mencari image data
+    // Use the same loop structure as local version
     for (const part of candidate.content.parts) {
-      if (part.inlineData && part.inlineData.data) {
+      if (part.inlineData) {
         console.log("Found image data, size:", part.inlineData.data.length);
         
-        // Return response dengan format yang sama seperti lokal
+        // Return response with the same format as local version
         return res.status(200).json({ 
           image: part.inlineData.data 
         });
       }
     }
 
-    // Jika tidak ada image data ditemukan
+    // If no image data found
     console.log("No image data found in response parts");
     return res.status(400).json({ error: "No image generated" });
 
