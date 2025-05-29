@@ -26,8 +26,7 @@ export default async function handler(req, res) {
 
     // Check if API key exists
     // HANYA UNTUK TESTING - JANGAN DI PRODUCTION
-    const apiKey =
-      process.env.GEMINI_API_KEY || "AIzaSyB3I8lg3vW3Cha-PYkf1eHkjhPXbuz1dqY";
+    const apiKey = process.env.GEMINI_API_KEY;
     console.log(
       "All env vars:",
       Object.keys(process.env).filter((key) => key.includes("GEMINI"))
