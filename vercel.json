@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "builds": [{ "src": "api/*.js", "use": "@vercel/node" }],
+  "builds": [
+    { "src": "api/*.js", "use": "@vercel/node" },
+    { "src": "src/**/*", "use": "@vercel/static" }
+  ],
   "routes": [
-    { "src": "/generate-image", "dest": "api/generate-image.js" },
-    { "src": "/generate-image.html", "dest": "src/generate-image.html" },
-    { "src": "/", "dest": "src/index.html" }
+    { "src": "/api/generate-image", "dest": "/api/generate-image.js" },
+    { "src": "/generate-image.html", "dest": "/src/generate-image.html" },
+    { "src": "/", "dest": "/src/index.html" },
+    { "src": "/(.*)", "dest": "/src/$1" }
   ]
 }
