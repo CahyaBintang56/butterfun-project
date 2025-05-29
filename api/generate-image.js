@@ -24,9 +24,21 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: "Prompt is required" });
     }
 
+    // Check if API key exists
+    const apiKey = process.env.GEMINI_API_KEY;
+    console.log("API Key exists:", !!apiKey);
+    console.log("API Key length:", apiKey ? apiKey.length : 0);
+    
+    if (!apiKey) {
+      return res.status(500).json({ 
+        error: "API key not configured",
+        message: "GEMINI_API_KEY environment variable is not set"
+      });
+    }
+
     // Initialize Gemini AI inside the handler (fresh instance)
     const ai = new GoogleGenAI({ 
-      apiKey: process.env.GEMINI_API_KEY 
+      apiKey: apiKey 
     });
 
     console.log("Calling Gemini API...");
