@@ -24,13 +24,26 @@ document.getElementById("generateBtn").addEventListener("click", async () => {
   placeholder.classList.remove("hidden");
 
   try {
-    const res = await fetch("/generate-image", {
+    // Gunakan URL yang benar untuk Vercel
+    const res = await fetch("/api/generate-image", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ prompt }),
     });
 
+    // Tambahkan logging untuk debug
+    console.log("Response status:", res.status);
+    console.log("Response ok:", res.ok);
+
+    if (!res.ok) {
+      const errorData = await res.json();
+      console.error("API Error:", errorData);
+      alert(`Error: ${errorData.error || "Unknown error"}`);
+      return;
+    }
+
     const data = await res.json();
+    console.log("Response data received:", !!data.image);
 
     if (data.image) {
       imgElement.src = `data:image/png;base64,${data.image}`;
@@ -39,14 +52,18 @@ document.getElementById("generateBtn").addEventListener("click", async () => {
 
       // Set data URL untuk tombol download
       downloadBtn.href = `data:image/png;base64,${data.image}`;
+      downloadBtn.download = `kue-ulang-tahun-${Date.now()}.png`;
       downloadBtn.classList.remove("hidden");
     } else {
-      alert("Gagal menghasilkan gambar.");
+      console.error("No image in response");
+      alert("Gagal menghasilkan gambar: Tidak ada gambar yang diterima.");
     }
   } catch (err) {
-    alert("Terjadi kesalahan.");
-    console.error(err);
+    console.error("Fetch error:", err);
+    alert(`Terjadi kesalahan: ${err.message}`);
   } finally {
     modal.classList.add("hidden");
   }
 });
+
+console.log("Script loaded");
