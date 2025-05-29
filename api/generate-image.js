@@ -26,13 +26,18 @@ export default async function handler(req, res) {
 
     // Check if API key exists
     const apiKey = process.env.GEMINI_API_KEY;
+    console.log("All env vars:", Object.keys(process.env).filter(key => key.includes('GEMINI')));
     console.log("API Key exists:", !!apiKey);
     console.log("API Key length:", apiKey ? apiKey.length : 0);
+    console.log("API Key first 10 chars:", apiKey ? apiKey.substring(0, 10) + "..." : "undefined");
     
     if (!apiKey) {
       return res.status(500).json({ 
         error: "API key not configured",
-        message: "GEMINI_API_KEY environment variable is not set"
+        message: "GEMINI_API_KEY environment variable is not set",
+        debug: {
+          availableEnvVars: Object.keys(process.env).filter(key => key.includes('GEMINI'))
+        }
       });
     }
 
