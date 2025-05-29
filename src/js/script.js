@@ -24,25 +24,13 @@ document.getElementById("generateBtn").addEventListener("click", async () => {
   placeholder.classList.remove("hidden");
 
   try {
-    // Deteksi environment untuk endpoint yang tepat
-    const isLocal =
-      window.location.hostname === "localhost" ||
-      window.location.hostname === "127.0.0.1";
-    const endpoint = isLocal ? "/generate-image" : "/api/generate-image";
-
-    console.log("Calling endpoint:", endpoint); // Debug log
-    console.log("Prompt:", prompt); // Debug log
-
-    const res = await fetch(endpoint, {
+    const res = await fetch("/generate-image", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ prompt }),
     });
 
-    console.log("Response status:", res.status); // Debug log
-
     const data = await res.json();
-    console.log("Response data:", data); // Debug log
 
     if (data.image) {
       imgElement.src = `data:image/png;base64,${data.image}`;
@@ -51,58 +39,14 @@ document.getElementById("generateBtn").addEventListener("click", async () => {
 
       // Set data URL untuk tombol download
       downloadBtn.href = `data:image/png;base64,${data.image}`;
-      downloadBtn.download = "generated-cake.png"; // Tambah nama file
       downloadBtn.classList.remove("hidden");
     } else {
-      // Tampilkan error yang lebih detail
-      console.error("API Error:", data);
-      alert(`Gagal menghasilkan gambar: ${data.error || "Unknown error"}`);
-
-      // Jika ada debug info, tampilkan di console
-      if (data.debug) {
-        console.log("Debug info:", data.debug);
-      }
+      alert("Gagal menghasilkan gambar.");
     }
   } catch (err) {
-    console.error("Fetch error:", err);
-    alert(`Terjadi kesalahan: ${err.message}`);
+    alert("Terjadi kesalahan.");
+    console.error(err);
   } finally {
     modal.classList.add("hidden");
   }
-});
-
-// Tambahan: Function untuk test endpoint
-async function testEndpoint() {
-  const isLocal =
-    window.location.hostname === "localhost" ||
-    window.location.hostname === "127.0.0.1";
-  const endpoint = isLocal ? "/generate-image" : "/api/generate-image";
-
-  try {
-    const res = await fetch(endpoint, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ prompt: "test simple cake" }),
-    });
-
-    const data = await res.json();
-    console.log("Test result:", data);
-    return data;
-  } catch (err) {
-    console.error("Test failed:", err);
-    return null;
-  }
-}
-
-// Auto-test saat halaman load (untuk debugging)
-window.addEventListener("load", () => {
-  console.log("Environment:", window.location.hostname);
-  console.log(
-    "Is local:",
-    window.location.hostname === "localhost" ||
-      window.location.hostname === "127.0.0.1"
-  );
-
-  // Uncomment line berikut untuk auto-test endpoint saat halaman load
-  // testEndpoint();
 });
