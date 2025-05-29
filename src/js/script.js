@@ -8,7 +8,7 @@ document.getElementById("generateBtn").addEventListener("click", async () => {
   const tingkatan = document.getElementById("tingkatan").value;
   const latar = document.getElementById("latar").value;
 
-  const prompt = `Buatkan saya kue ulang tahun dengan ${userPrompt} dan tambahan tingkatan ${tingkatan} tingkat, dengan model gambar ${model} dimensi, warna ${warna}, bentuk ${bentuk}, toping ${toping}, dan latar ${latar}.`;
+  const prompt = `Buatkan saya kue ulang tahun dengan tingkatan ${tingkatan} tingkat, dengan model gambar ${model} dimensi, warna ${warna}, bentuk ${bentuk}, toping ${toping}, dan latar ${latar} dan tambahan ${userPrompt}.`;
 
   // Tampilkan modal loading
   const modal = document.getElementById("loadingModal");
