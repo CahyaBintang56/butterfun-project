@@ -17,11 +17,20 @@
         <div
           class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
         >
+          <!-- Logo untuk mode terang -->
           <img
             src="/public/butterfun-logo-black.png"
-            class="h-8"
-            alt="Butterfun Logo"
+            class="h-8 block dark:hidden"
+            alt="Butterfun Logo Light"
           />
+
+          <!-- Logo untuk mode gelap -->
+          <img
+            src="/public/butterfun-logo-white.png"
+            class="h-8 hidden dark:block"
+            alt="Butterfun Logo Dark"
+          />
+
           <div
             class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
           >
@@ -74,37 +83,70 @@
                       >
                         Pilih warna
                       </option>
-                      <option class="text-black dark:text-white" value="merah">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="merah"
+                      >
                         Merah
                       </option>
-                      <option class="text-black dark:text-white" value="biru">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="biru"
+                      >
                         Biru
                       </option>
-                      <option class="text-black dark:text-white" value="pink">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="pink"
+                      >
                         Pink
                       </option>
-                      <option class="text-black dark:text-white" value="ungu">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="ungu"
+                      >
                         Ungu
                       </option>
-                      <option class="text-black dark:text-white" value="putih">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="putih"
+                      >
                         Putih
                       </option>
-                      <option class="text-black dark:text-white" value="kuning">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="kuning"
+                      >
                         Kuning
                       </option>
-                      <option class="text-black dark:text-white" value="hijau">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="hijau"
+                      >
                         Hijau
                       </option>
-                      <option class="text-black dark:text-white" value="oranye">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="oranye"
+                      >
                         Oranye
                       </option>
-                      <option class="text-black dark:text-white" value="coklat">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="coklat"
+                      >
                         Coklat
                       </option>
-                      <option class="text-black dark:text-white" value="emas">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="emas"
+                      >
                         Emas
                       </option>
-                      <option class="text-black dark:text-white" value="perak">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="perak"
+                      >
                         Perak
                       </option>
                       <option
@@ -113,7 +155,10 @@
                       >
                         Pink Pastel
                       </option>
-                      <option class="text-black dark:text-white" value="mint">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="mint"
+                      >
                         Mint
                       </option>
                       <option
@@ -128,7 +173,10 @@
                       >
                         Biru Muda
                       </option>
-                      <option class="text-black dark:text-white" value="peach">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="peach"
+                      >
                         Peach
                       </option>
                       <option
@@ -137,7 +185,10 @@
                       >
                         Abu-abu
                       </option>
-                      <option class="text-black dark:text-white" value="hitam">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="hitam"
+                      >
                         Hitam
                       </option>
                       <option
@@ -168,13 +219,22 @@
                       >
                         Pilih bentuk
                       </option>
-                      <option class="text-black dark:text-white" value="bulat">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="bulat"
+                      >
                         Bulat
                       </option>
-                      <option class="text-black dark:text-white" value="kotak">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="kotak"
+                      >
                         Kotak
                       </option>
-                      <option class="text-black dark:text-white" value="hati">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="hati"
+                      >
                         Bentuk Hati
                       </option>
                     </select>
@@ -193,10 +253,16 @@
                       >
                         Pilih toping
                       </option>
-                      <option class="text-black dark:text-white" value="coklat">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="coklat"
+                      >
                         Cokelat Serut
                       </option>
-                      <option class="text-black dark:text-white" value="buah">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="buah"
+                      >
                         Buah Segar
                       </option>
                       <option
@@ -223,13 +289,22 @@
                       >
                         Blueberry
                       </option>
-                      <option class="text-black dark:text-white" value="kacang">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="kacang"
+                      >
                         Taburan Kacang
                       </option>
-                      <option class="text-black dark:text-white" value="oreo">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="oreo"
+                      >
                         Remahan Oreo
                       </option>
-                      <option class="text-black dark:text-white" value="keju">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="keju"
+                      >
                         Keju Parut
                       </option>
                       <option
@@ -244,7 +319,10 @@
                       >
                         Marshmallow
                       </option>
-                      <option class="text-black dark:text-white" value="permen">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="permen"
+                      >
                         Permen Mini
                       </option>
                       <option
@@ -271,16 +349,28 @@
                       >
                         Saus Stroberi
                       </option>
-                      <option class="text-black dark:text-white" value="kismis">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="kismis"
+                      >
                         Kismis
                       </option>
-                      <option class="text-black dark:text-white" value="kelapa">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="kelapa"
+                      >
                         Kelapa Parut
                       </option>
-                      <option class="text-black dark:text-white" value="matcha">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="matcha"
+                      >
                         Bubuk Matcha
                       </option>
-                      <option class="text-black dark:text-white" value="madu">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="madu"
+                      >
                         Tetesan Madu
                       </option>
                     </select>
@@ -299,13 +389,13 @@
                       >
                         Pilih tingkatan
                       </option>
-                      <option class="text-black dark:text-white" value="1">
+                      <option class="text-gray-900 dark:text-white" value="1">
                         1 Tingkat
                       </option>
-                      <option class="text-black dark:text-white" value="2">
+                      <option class="text-gray-900 dark:text-white" value="2">
                         2 Tingkat
                       </option>
-                      <option class="text-black dark:text-white" value="3">
+                      <option class="text-gray-900 dark:text-white" value="3">
                         3 Tingkat
                       </option>
                     </select>
@@ -324,10 +414,10 @@
                       >
                         Pilih model
                       </option>
-                      <option class="text-black dark:text-white" value="2">
+                      <option class="text-gray-900 dark:text-white" value="2">
                         2D
                       </option>
-                      <option class="text-black dark:text-white" value="3">
+                      <option class="text-gray-900 dark:text-white" value="3">
                         3D
                       </option>
                     </select>
@@ -346,7 +436,10 @@
                       >
                         Pilih latar
                       </option>
-                      <option class="text-black dark:text-white" value="pantai">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="pantai"
+                      >
                         Pantai
                       </option>
                       <option
@@ -355,25 +448,46 @@
                       >
                         Pegunungan
                       </option>
-                      <option class="text-black dark:text-white" value="hutan">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="hutan"
+                      >
                         Hutan
                       </option>
-                      <option class="text-black dark:text-white" value="langit">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="langit"
+                      >
                         Langit
                       </option>
-                      <option class="text-black dark:text-white" value="awan">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="awan"
+                      >
                         Awan
                       </option>
-                      <option class="text-black dark:text-white" value="taman">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="taman"
+                      >
                         Taman
                       </option>
-                      <option class="text-black dark:text-white" value="salju">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="salju"
+                      >
                         Salju
                       </option>
-                      <option class="text-black dark:text-white" value="kota">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="kota"
+                      >
                         Kota
                       </option>
-                      <option class="text-black dark:text-white" value="malam">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="malam"
+                      >
                         Langit Malam
                       </option>
                       <option
@@ -382,10 +496,16 @@
                       >
                         Pelangi
                       </option>
-                      <option class="text-black dark:text-white" value="rumput">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="rumput"
+                      >
                         Rumput Hijau
                       </option>
-                      <option class="text-black dark:text-white" value="lautan">
+                      <option
+                        class="text-gray-900 dark:text-white"
+                        value="lautan"
+                      >
                         Lautan
                       </option>
                       <option
