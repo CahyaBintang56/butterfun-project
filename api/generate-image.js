@@ -1,12 +1,16 @@
+import express from "express";
 import { GoogleGenAI, Modality } from "@google/genai";
+import { createServerlessExpress } from "@vendia/serverless-express";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const app = express();
+app.use(express.json());
 
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
-export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method Not Allowed" });
-  }
-
+app.post("/generate-image", async (req, res) => {
   try {
     const { prompt } = req.body;
 
@@ -29,4 +33,7 @@ export default async function handler(req, res) {
     console.error(error);
     res.status(500).json({ error: "Internal Server Error" });
   }
-}
+});
+
+// ✅ Export Express as a Serverless Function
+export default createServerlessExpress({ app });
