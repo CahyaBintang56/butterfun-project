@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BUTTERFUN</title>
+    <link rel="icon" href="/public/butterfun-logo.jpg" type="image/jpg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@1.6.5/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div>
+      <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <img
+            src="/public/butterfun-logo.jpg"
+            class="h-8"
+            alt="Butterfun Logo"
+          />
+          <div
+            class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
+          >
+            <a
+              href="../index.html"
+              target="_blank"
+              class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-700 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-purple-700 dark:hover:bg-purple-800 dark:focus:ring-purple-700"
+            >
+              Kembali
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div
+      class="max-w-7xl mx-auto rounded-md shadow-lg border border-gray-200 dark:border-gray-700 dark:bg-gray-800 my-8"
+    >
+      <section
+        class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16 rounded-md mx-auto p-8"
+      >
+        <div class="mx-auto">
+          <div class="mx-auto">
+            <h2
+              class="mb-4 text-4xl tracking-tight font-extrabold leading-tight text-purple-800 dark:text-white"
+            >
+              Buat model kue ulang tahun dengan AI
+            </h2>
+
+            <div class="mt-6 sm:mt-8 lg:flex lg:items-start lg:gap-12">
+              <div
+                class="w-full rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6 lg:max-w-xl lg:p-8"
+              >
+                <div class="mb-6">
+                  <label
+                    for="prompt"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Keterangan</label
+                  >
+                  <textarea
+                    id="prompt"
+                    rows="3"
+                    class="block p-2.5 w-full text-sm text-gray-900 bg-purple-50 rounded-lg border border-gray-300 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500"
+                    placeholder="Tulis keterangan kue disini..."
+                  ></textarea>
+                </div>
+
+                <label
+                  for="opsi"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Opsi Tambahan</label
+                >
+                <div class="grid grid-cols-3 gap-x-4">
+                  <div>
+                    <select
+                      id="warna"
+                      class="bg-purple-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    >
+                      <option value="" selected disabled>Pilih warna</option>
+                      <option value="merah">Merah</option>
+                      <option value="biru">Biru</option>
+                      <option value="pink">Pink</option>
+                      <option value="ungu">Ungu</option>
+                      <option value="putih">Putih</option>
+                      <option value="kuning">Kuning</option>
+                      <option value="hijau">Hijau</option>
+                      <option value="oranye">Oranye</option>
+                      <option value="coklat">Coklat</option>
+                      <option value="emas">Emas</option>
+                      <option value="perak">Perak</option>
+                      <option value="pastel pink">Pink Pastel</option>
+                      <option value="mint">Mint</option>
+                      <option value="lavender">Lavender</option>
+                      <option value="biru muda">Biru Muda</option>
+                      <option value="peach">Peach</option>
+                      <option value="abu-abu">Abu-abu</option>
+                      <option value="hitam">Hitam</option>
+                      <option value="biru navy">Biru Navy</option>
+                      <option value="rose gold">Rose Gold</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <select
+                      id="bentuk"
+                      class="bg-purple-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    >
+                      <option value="" selected disabled>Pilih bentuk</option>
+                      <option value="bulat">Bulat</option>
+                      <option value="kotak">Kotak</option>
+                      <option value="hati">Bentuk Hati</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <select
+                      id="toping"
+                      class="bg-purple-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    >
+                      <option value="" selected disabled>Pilih toping</option>
+                      <option value="coklat">Cokelat Serut</option>
+                      <option value="buah">Buah Segar</option>
+                      <option value="whipped cream">Whipped Cream</option>
+                      <option value="karamel">Karamel</option>
+                      <option value="stroberi">Irisan Stroberi</option>
+                      <option value="blueberry">Blueberry</option>
+                      <option value="kacang">Taburan Kacang</option>
+                      <option value="oreo">Remahan Oreo</option>
+                      <option value="keju">Keju Parut</option>
+                      <option value="sprinkles">Sprinkles Warna-warni</option>
+                      <option value="marshmallow">Marshmallow</option>
+                      <option value="permen">Permen Mini</option>
+                      <option value="biskuit">Biskuit Hancur</option>
+                      <option value="choco chip">Choco Chips</option>
+                      <option value="saus coklat">Saus Cokelat</option>
+                      <option value="saus stroberi">Saus Stroberi</option>
+                      <option value="kismis">Kismis</option>
+                      <option value="kelapa">Kelapa Parut</option>
+                      <option value="matcha">Bubuk Matcha</option>
+                      <option value="madu">Tetesan Madu</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <select
+                      id="tingkatan"
+                      class="bg-purple-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    >
+                      <option value="" selected disabled>
+                        Pilih tingkatan
+                      </option>
+                      <option value="1">1 Tingkat</option>
+                      <option value="2">2 Tingkat</option>
+                      <option value="3">3 Tingkat</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <select
+                      id="model"
+                      class="bg-purple-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    >
+                      <option value="" selected disabled>Pilih model</option>
+                      <option value="2">2D</option>
+                      <option value="3">3D</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <select
+                      id="latar"
+                      class="bg-purple-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    >
+                      <option value="" selected disabled>Pilih latar</option>
+                      <option value="pantai">Pantai</option>
+                      <option value="pegunungan">Pegunungan</option>
+                      <option value="hutan">Hutan</option>
+                      <option value="langit">Langit</option>
+                      <option value="awan">Awan</option>
+                      <option value="taman">Taman</option>
+                      <option value="salju">Salju</option>
+                      <option value="kota">Kota</option>
+                      <option value="malam">Langit Malam</option>
+                      <option value="pelangi">Pelangi</option>
+                      <option value="rumput">Rumput Hijau</option>
+                      <option value="lautan">Lautan</option>
+                      <option value="hutan pinus">Hutan Pinus</option>
+                      <option value="matahari terbenam">
+                        Matahari Terbenam
+                      </option>
+                      <option value="abstrak">Abstrak</option>
+                      <option value="glitter">Glitter</option>
+                      <option value="gradient pastel">Gradasi Pastel</option>
+                      <option value="gradient gelap">Gradasi Gelap</option>
+                      <option value="warna merah">Merah</option>
+                      <option value="warna biru">Biru</option>
+                      <option value="warna pink">Pink</option>
+                      <option value="warna ungu">Ungu</option>
+                      <option value="warna putih">Putih</option>
+                      <option value="warna kuning">Kuning</option>
+                      <option value="warna hijau">Hijau</option>
+                      <option value="warna oranye">Oranye</option>
+                      <option value="warna coklat">Coklat</option>
+                      <option value="warna emas">Emas</option>
+                      <option value="warna perak">Perak</option>
+                      <option value="warna pastel pink">Pink Pastel</option>
+                      <option value="warna mint">Mint</option>
+                      <option value="warna lavender">Lavender</option>
+                      <option value="warna biru muda">Biru Muda</option>
+                      <option value="warna peach">Peach</option>
+                      <option value="warna abu-abu">Abu-abu</option>
+                      <option value="warna hitam">Hitam</option>
+                      <option value="warna biru navy">Biru Navy</option>
+                      <option value="warna rose gold">Rose Gold</option>
+                    </select>
+                  </div>
+                </div>
+
+                <button
+                  id="generateBtn"
+                  class="mt-4 px-4 py-2 bg-purple-700 text-white rounded hover:bg-purple-800 w-full"
+                >
+                  Buat model gambar
+                </button>
+              </div>
+
+              <div class="mt-6 grow sm:mt-8 lg:mt-0">
+                <div
+                  id="result"
+                  class="mx-4 rounded-lg border border-gray-100 bg-purple-50 p-6 dark:border-gray-700 dark:bg-gray-800"
+                >
+                  <!-- Kotak Gambar -->
+                  <div
+                    id="imageContainer"
+                    class="w-full max-w-md mx-auto my-4 border border-gray-300 rounded p-4 flex flex-col items-center justify-center"
+                  >
+                    <span id="placeholderText" class="text-gray-500 mb-4"
+                      >Gambar belum dibuat</span
+                    >
+                    <img
+                      id="generatedImage"
+                      class="max-w-full max-h-72 hidden mb-4"
+                    />
+                    <!-- Tombol Download di bawah gambar -->
+                    <a
+                      id="downloadBtn"
+                      class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded hidden"
+                      download="kue-ulang-tahun.png"
+                    >
+                      Download Gambar
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Modal Loading -->
+    <div
+      id="loadingModal"
+      class="fixed top-0 left-0 right-0 z-50 flex items-center justify-center w-full h-full bg-black bg-opacity-50 hidden"
+    >
+      <div class="bg-white p-6 rounded-lg shadow-lg flex items-center gap-4">
+        <svg
+          class="w-6 h-6 text-purple-700 animate-spin"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <circle
+            class="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            stroke-width="4"
+          ></circle>
+          <path
+            class="opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+          ></path>
+        </svg>
+        <span class="text-purple-700 font-medium"
+          >Sedang memproses gambar...</span
+        >
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div>
+      <footer class="bg-purple-700 dark:bg-gray-900">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+          <div class="md:flex md:justify-between">
+            <div class="mb-6 md:mb-0">
+              <img
+                src="/public/butterfun-logo-white.png"
+                class="h-8 me-3"
+                alt="butterfun-logo-white Logo"
+              />
+            </div>
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
+              <div>
+                <h2
+                  class="mb-6 text-sm font-semibold text-white uppercase dark:text-white"
+                >
+                  Social Media
+                </h2>
+                <ul class="text-white dark:text-gray-400 font-medium">
+                  <li class="mb-4">
+                    <a
+                      href="https://www.instagram.com/butterfun.id/"
+                      target="_blank"
+                      class="hover:underline"
+                      >Instagram : @butterfun.id
+                    </a>
+                  </li>
+                  <li>
+                    <p>Email : butterfun.id@gmail.com</p>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h2
+                  class="mb-6 text-sm font-semibold text-white uppercase dark:text-white"
+                >
+                  Pesanan
+                </h2>
+                <ul class="text-white dark:text-gray-400 font-medium">
+                  <li class="mb-4">
+                    <a
+                      href="https://api.whatsapp.com/send?phone=6285887978204"
+                      target="_blank"
+                      class="hover:underline"
+                      >Custome Cake</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://api.whatsapp.com/send?phone=628567324142"
+                      target="_blank"
+                      class="hover:underline"
+                      >Sameday Korean Cake</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr
+            class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+          />
+          <div class="sm:flex sm:items-center sm:justify-between">
+            <span class="text-sm text-white sm:text-center dark:text-gray-400">
+              <p>
+                © Asriyanti Lestari(2360078), Cahya Bintang Gagana
+                Yuliano(2360089), Dea Seinthia Safani(2360096), Hera Nur
+                Azizah(2360142), Shintha Aulia(2360261)
+              </p>
+            </span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/datepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@1.6.5/dist/flowbite.min.js"></script>
+  </body>
+</html>

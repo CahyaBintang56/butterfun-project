@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BUTTERFUN</title>
+    <link rel="icon" href="/public/butterfun-logo.jpg" type="image/jpg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@1.6.5/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div>
+      <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <img
+            src="/public/butterfun-logo.jpg"
+            class="h-8"
+            alt="Butterfun Logo"
+          />
+          <div
+            class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
+          >
+            <a
+              href="/generate-image.html"
+              target="_blank"
+              class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-700 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-purple-700 dark:hover:bg-purple-800 dark:focus:ring-purple-700"
+            >
+              Buat Model Kue
+            </a>
+            <button
+              data-collapse-toggle="navbar-cta"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-cta"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-cta"
+          >
+            <ul
+              class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            >
+              <li>
+                <a
+                  href="#beranda"
+                  class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#tentang"
+                  class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Tentang</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#keunggulan"
+                  class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Keunggulan</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#galeri"
+                  class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Galeri</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#kontak"
+                  class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- HERO -->
+    <div id="beranda">
+      <section class="bg-white dark:bg-gray-900 pt-24">
+        <div
+          class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+        >
+          <div class="mr-auto place-self-center lg:col-span-7">
+            <h1
+              class="max-w-2xl mb-4 text-4xl text-purple-800 font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"
+            >
+              Nikmati Lezatnya Setiap Gigitan
+            </h1>
+            <p
+              class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"
+            >
+              Dari kue ulang tahun hingga hampers istimewa, BUTTERFUN hadir
+              untuk memeriahkan setiap momen spesial Anda dengan cita rasa manis
+              yang tak terlupakan.
+            </p>
+            <button
+              type="button"
+              data-modal-target="crypto-modal"
+              data-modal-toggle="crypto-modal"
+              href="#"
+              class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-700 dark:focus:ring-purple-800"
+            >
+              Hubungi Sekarang
+            </button>
+            <!-- Main modal -->
+            <div
+              id="crypto-modal"
+              tabindex="-1"
+              aria-hidden="true"
+              class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+            >
+              <div class="relative p-4 w-full max-w-md max-h-full">
+                <!-- Modal content -->
+                <div
+                  class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700"
+                >
+                  <!-- Modal header -->
+                  <div
+                    class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200"
+                  >
+                    <h3
+                      class="text-lg font-semibold text-gray-900 dark:text-white"
+                    >
+                      Pilih WhatsApp
+                    </h3>
+                    <button
+                      type="button"
+                      class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                      data-modal-toggle="crypto-modal"
+                    >
+                      <svg
+                        class="w-3 h-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 14 14"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                        />
+                      </svg>
+                      <span class="sr-only">Close modal</span>
+                    </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class="p-4 md:p-5">
+                    <p
+                      class="text-sm font-normal text-gray-500 dark:text-gray-400"
+                    >
+                      Silakan hubungi salah satu dari dua kontak WhatsApp kami
+                      yang tersedia, atau pilih sesuai kebutuhan Anda.
+                    </p>
+                    <ul class="my-4 space-y-3">
+                      <li>
+                        <a
+                          href="https://api.whatsapp.com/send?phone=6285887978204"
+                          target="_blank"
+                          class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                        >
+                          <svg
+                            class="w-6 h-6 text-gray-800 dark:text-white"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              fill="currentColor"
+                              fill-rule="evenodd"
+                              d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z"
+                              clip-rule="evenodd"
+                            />
+                            <path
+                              fill="currentColor"
+                              d="M16.735 13.492c-.038-.018-1.497-.736-1.756-.83a1.008 1.008 0 0 0-.34-.075c-.196 0-.362.098-.49.291-.146.217-.587.732-.723.886-.018.02-.042.045-.057.045-.013 0-.239-.093-.307-.123-1.564-.68-2.751-2.313-2.914-2.589-.023-.04-.024-.057-.024-.057.005-.021.058-.074.085-.101.08-.079.166-.182.249-.283l.117-.14c.121-.14.175-.25.237-.375l.033-.066a.68.68 0 0 0-.02-.64c-.034-.069-.65-1.555-.715-1.711-.158-.377-.366-.552-.655-.552-.027 0 0 0-.112.005-.137.005-.883.104-1.213.311-.35.22-.94.924-.94 2.16 0 1.112.705 2.162 1.008 2.561l.041.06c1.161 1.695 2.608 2.951 4.074 3.537 1.412.564 2.081.63 2.461.63.16 0 .288-.013.4-.024l.072-.007c.488-.043 1.56-.599 1.804-1.276.192-.534.243-1.117.115-1.329-.088-.144-.239-.216-.43-.308Z"
+                            />
+                          </svg>
+                          <span class="flex-1 pl-3 ms-3 whitespace-nowrap"
+                            >Custom Cake</span
+                          >
+                          <span
+                            class="inline-flex items-center justify-center px-2 py-0.5 ms-3 text-xs font-medium text-gray-500 bg-gray-200 rounded-sm dark:bg-gray-700 dark:text-gray-400"
+                            >Popular</span
+                          >
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://api.whatsapp.com/send?phone=628567324142"
+                          target="_blank"
+                          class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                        >
+                          <svg
+                            class="w-6 h-6 text-gray-800 dark:text-white"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              fill="currentColor"
+                              fill-rule="evenodd"
+                              d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z"
+                              clip-rule="evenodd"
+                            />
+                            <path
+                              fill="currentColor"
+                              d="M16.735 13.492c-.038-.018-1.497-.736-1.756-.83a1.008 1.008 0 0 0-.34-.075c-.196 0-.362.098-.49.291-.146.217-.587.732-.723.886-.018.02-.042.045-.057.045-.013 0-.239-.093-.307-.123-1.564-.68-2.751-2.313-2.914-2.589-.023-.04-.024-.057-.024-.057.005-.021.058-.074.085-.101.08-.079.166-.182.249-.283l.117-.14c.121-.14.175-.25.237-.375l.033-.066a.68.68 0 0 0-.02-.64c-.034-.069-.65-1.555-.715-1.711-.158-.377-.366-.552-.655-.552-.027 0 0 0-.112.005-.137.005-.883.104-1.213.311-.35.22-.94.924-.94 2.16 0 1.112.705 2.162 1.008 2.561l.041.06c1.161 1.695 2.608 2.951 4.074 3.537 1.412.564 2.081.63 2.461.63.16 0 .288-.013.4-.024l.072-.007c.488-.043 1.56-.599 1.804-1.276.192-.534.243-1.117.115-1.329-.088-.144-.239-.216-.43-.308Z"
+                            />
+                          </svg>
+
+                          <span class="flex-1 pl-3 ms-3 whitespace-nowrap"
+                            >Sameday Korean Cake</span
+                          >
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a
+              href="/generate-image.html"
+              target="_blank"
+              class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+            >
+              Buat Model Kue
+              <svg
+                class="w-5 h-5 ml-2 -mr-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <div class="hidden lg:mt-0 lg:col-span-5 lg:flex justify-end">
+            <img
+              src="/public/gambar-hero.png"
+              alt="Tampilan produk kue Butterfun"
+              style="width: 70%; height: auto"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- CONTENT -->
+    <div id="tentang">
+      <section class="bg-purple-50 dark:bg-gray-900">
+        <div
+          class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
+        >
+          <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+            <h2
+              class="mb-4 text-4xl tracking-tight font-extrabold text-purple-800 dark:text-white"
+            >
+              Kami Membuat Kue dengan Hati
+            </h2>
+            <p class="mb-4">
+              BUTTERFUN adalah perpaduan antara rasa, kreativitas, dan cinta.
+              Kami tidak hanya membuat kue, kami menciptakan pengalaman manis
+              yang menyenangkan. Dengan tim yang berdedikasi dan resep yang
+              otentik, kami selalu berkomitmen menyajikan produk terbaik yang
+              dibuat segar setiap hari.
+            </p>
+            <p>
+              Kami percaya bahwa setiap momen spesial pantas dirayakan dengan
+              sesuatu yang istimewa. Itulah sebabnya kami hadir, untuk menjadi
+              bagian dari cerita manis anda dari kejutan ulang tahun anak,
+              syukuran kecil di rumah, hingga hadiah penuh makna untuk orang
+              tersayang. Setiap lapis kue dari BUTTERFUN punya cerita, dan kami
+              bangga menjadi bagian dari cerita Anda.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-4 mt-8">
+            <img
+              class="w-full rounded-lg"
+              src="/public/gambar2.jpg"
+              alt="office content 1"
+            />
+            <img
+              class="mt-4 w-full lg:mt-10 rounded-lg"
+              src="/public/gambar10.jpg"
+              alt="office content 2"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- FEATURE -->
+    <div id="keunggulan">
+      <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+          <div class="max-w-screen-xl mb-8 lg:mb-16">
+            <h2
+              class="mb-4 text-4xl tracking-tight font-extrabold text-purple-800 dark:text-white"
+            >
+              Kenapa Memilih BUTTERFUN?
+            </h2>
+            <p class="text-gray-500 sm:text-xl dark:text-gray-400">
+              Di BUTTERFUN, kami percaya bahwa setiap kue punya peran penting
+              dalam setiap momen bahagia Anda. Oleh karena itu, kami tidak hanya
+              fokus pada rasa, tapi juga pada kualitas, tampilan, dan pelayanan.
+              Berikut beberapa alasan mengapa pelanggan kami selalu kembali
+              untuk merayakan momen spesial mereka bersama kami:
+            </p>
+          </div>
+          <div
+            class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0"
+          >
+            <div>
+              <div
+                class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900"
+              >
+                <svg
+                  class="w-6 h-6 text-purple-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="mb-2 text-xl font-bold dark:text-white text-purple-800"
+              >
+                Rasa Premium
+              </h3>
+              <p class="text-gray-500 dark:text-gray-400">
+                Setiap kue dibuat dengan bahan berkualitas dan cita rasa
+                istimewa yang memanjakan lidah.
+              </p>
+            </div>
+            <div>
+              <div
+                class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900"
+              >
+                <svg
+                  class="w-6 h-6 text-purple-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M11.6643 2.05648c.0197-.00699.1589-.05645.3357-.05645.1768 0 .316.04946.3357.05645l.0019.00067c.0461.01577.0846.03229.1092.04332.0514.02304.1015.04898.1449.07268.0896.04898.1957.11302.3102.18855.2291.15109.521.36725.8121.63689C14.247 3.49218 15 4.37 15 5.50003c0 1.12688-.7447 2.00396-1.2779 2.49995-.2531.23541-.5075.43043-.7221.57742V10h5c.5523 0 1 .4477 1 1v3h-4c-.0568 0-.1125.0048-.1667.0139-.0542-.0091-.1099-.0139-.1667-.0139H5v-3c0-.5523.44772-1 1-1h5V8.57622c-.2139-.14666-.4676-.34115-.7202-.57589C9.74664 7.50489 9 6.62764 9 5.50003c0-1.13003.753-2.00785 1.286-2.50144.2911-.26964.583-.4858.8121-.63689.1145-.07553.2206-.13957.3102-.18855.0434-.0237.0935-.04964.1449-.07268.0246-.01103.0631-.02755.1092-.04332l.0019-.00067ZM4 17.8377V21c0 .5523.44772 1 1 1h14c.5523 0 1-.4477 1-1v-2.8243c-.0609.0534-.1248.1054-.1917.1556-.56.42-1.274.6687-2.1416.6687-.8677 0-1.5817-.2487-2.1417-.6687-.281-.2108-.5081-.4531-.6917-.7045-.1835.2514-.4106.4937-.6917.7045-.5599.42-1.2739.6687-2.1416.6687-.8677 0-1.5817-.2487-2.14169-.6687-.20142-.1511-.37514-.3184-.52499-.4936-.14984.1752-.32356.3425-.52499.4936-.55999.42-1.27398.6687-2.14166.6687s-1.58168-.2487-2.14167-.6687c-.20143-.1511-.37515-.3184-.525-.4936ZM5.2078 16c.0124.0314.0255.0628.03934.0939.11841.2664.27553.4856.47786.6374.19001.1425.47602.2687.94167.2687s.75165-.1262.94166-.2687c.20234-.1518.35945-.371.47786-.6374.01384-.0311.02694-.0625.03934-.0939H5.2078Zm5.3727.0939c-.0139-.0311-.027-.0625-.0394-.0939h2.9177c-.0124.0314-.0255.0628-.0393.0939-.1184.2664-.2755.4856-.4779.6374-.19.1425-.476.2687-.9416.2687-.4657 0-.7517-.1262-.9417-.2687-.2023-.1518-.3594-.371-.4778-.6374Zm5.6666 0c-.0138-.0311-.0269-.0625-.0393-.0939h2.9177c-.0124.0314-.0255.0628-.0393.0939-.1184.2664-.2755.4856-.4779.6374-.19.1425-.476.2687-.9416.2687-.4657 0-.7517-.1262-.9417-.2687-.2023-.1518-.3594-.371-.4779-.6374Z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="mb-2 text-xl font-bold text-purple-800 dark:text-white"
+              >
+                Desain Unik & Custom
+              </h3>
+              <p class="text-gray-500 dark:text-gray-400">
+                Anda bisa memesan kue dengan desain sesuai keinginan dan tema
+                acara.
+              </p>
+            </div>
+            <div>
+              <div
+                class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900"
+              >
+                <svg
+                  class="w-6 h-6 text-purple-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M11.644 3.066a1 1 0 0 1 .712 0l7 2.666A1 1 0 0 1 20 6.68a17.694 17.694 0 0 1-2.023 7.98 17.406 17.406 0 0 1-5.402 6.158 1 1 0 0 1-1.15 0 17.405 17.405 0 0 1-5.403-6.157A17.695 17.695 0 0 1 4 6.68a1 1 0 0 1 .644-.949l7-2.666Zm4.014 7.187a1 1 0 0 0-1.316-1.506l-3.296 2.884-.839-.838a1 1 0 0 0-1.414 1.414l1.5 1.5a1 1 0 0 0 1.366.046l4-3.5Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="mb-2 text-xl font-bold text-purple-800 dark:text-white"
+              >
+                Fresh & Made to Order
+              </h3>
+              <p class="text-gray-500 dark:text-gray-400">
+                Semua kue dibuat saat ada pesanan, tanpa stok lama, sehingga
+                selalu segar.
+              </p>
+            </div>
+            <div>
+              <div
+                class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900"
+              >
+                <svg
+                  class="w-6 h-6 text-purple-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2ZM7.99 9a1 1 0 0 1 1-1H9a1 1 0 0 1 0 2h-.01a1 1 0 0 1-1-1ZM14 9a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2H15a1 1 0 0 1-1-1Zm-5.506 7.216A5.5 5.5 0 0 1 6.6 13h10.81a5.5 5.5 0 0 1-8.916 3.216Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="mb-2 text-xl font-bold text-purple-800 dark:text-white"
+              >
+                Cocok untuk Segala Acara
+              </h3>
+              <p class="text-gray-500 dark:text-gray-400">
+                Dari ulang tahun, lamaran, hingga hampers lebaran, semua bisa
+                kami siapkan.
+              </p>
+            </div>
+            <div>
+              <div
+                class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900"
+              >
+                <svg
+                  class="w-6 h-6 text-purple-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M14 7h-4v3a1 1 0 0 1-2 0V7H6a1 1 0 0 0-.997.923l-.917 11.924A2 2 0 0 0 6.08 22h11.84a2 2 0 0 0 1.994-2.153l-.917-11.924A1 1 0 0 0 18 7h-2v3a1 1 0 1 1-2 0V7Zm-2-3a2 2 0 0 0-2 2v1H8V6a4 4 0 0 1 8 0v1h-2V6a2 2 0 0 0-2-2Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="mb-2 text-xl font-bold text-purple-800 dark:text-white"
+              >
+                Pengantaran Aman & Cepat
+              </h3>
+              <p class="text-gray-500 dark:text-gray-400">
+                Layanan pengiriman dengan packaging aman agar kue sampai dalam
+                kondisi sempurna.
+              </p>
+            </div>
+            <div>
+              <div
+                class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900"
+              >
+                <svg
+                  class="w-6 h-6 text-purple-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2a7 7 0 0 0-7 7 3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h1a1 1 0 0 0 1-1V9a5 5 0 1 1 10 0v7.083A2.919 2.919 0 0 1 14.083 19H14a2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h1a2 2 0 0 0 1.732-1h.351a4.917 4.917 0 0 0 4.83-4H19a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3 7 7 0 0 0-7-7Zm1.45 3.275a4 4 0 0 0-4.352.976 1 1 0 0 0 1.452 1.376 2.001 2.001 0 0 1 2.836-.067 1 1 0 1 0 1.386-1.442 4 4 0 0 0-1.321-.843Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="mb-2 text-xl font-bold text-purple-800 dark:text-white"
+              >
+                Pelayanan Ramah & Responsif
+              </h3>
+              <p class="text-gray-500 dark:text-gray-400">
+                Konsultasi mudah lewat WhatsApp, kami siap bantu mulai dari ide
+                hingga pengiriman.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- GALERY -->
+    <div id="galeri">
+      <section class="bg-purple-50 dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+          <div class="mx-auto max-w-screen-sm text-center">
+            <h2
+              class="mb-4 text-4xl tracking-tight font-extrabold leading-tight text-purple-800 dark:text-white"
+            >
+              Galeri Toko
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+              <!-- Item 1 -->
+              <div class="bg-white rounded-lg shadow-md">
+                <img
+                  src="/public/gambar3.jpg"
+                  class="w-full rounded-t-lg"
+                  alt="Gambar 1"
+                />
+              </div>
+
+              <!-- Item 2 -->
+              <div class="bg-white rounded-lg shadow-md">
+                <img
+                  src="/public/gambar8.jpg"
+                  class="w-full rounded-t-lg"
+                  alt="Gambar 2"
+                />
+              </div>
+
+              <!-- Item 3 -->
+              <div class="bg-white rounded-lg shadow-md">
+                <img
+                  src="/public/gambar6.jpg"
+                  class="w-full rounded-t-lg"
+                  alt="Gambar 3"
+                />
+              </div>
+
+              <!-- Item 4 -->
+              <div class="bg-white rounded-lg shadow-md">
+                <img
+                  src="/public/gambar7.jpg"
+                  class="w-full rounded-t-lg"
+                  alt="Gambar 4"
+                />
+              </div>
+
+              <!-- Item 5 -->
+              <div class="bg-white rounded-lg shadow-md">
+                <img
+                  src="/public/gambar5.jpg"
+                  class="w-full rounded-t-lg"
+                  alt="Gambar 5"
+                />
+              </div>
+
+              <!-- Item 6 -->
+              <div class="bg-white rounded-lg shadow-md">
+                <img
+                  src="/public/gambar11.jpg"
+                  class="w-full rounded-t-lg"
+                  alt="Gambar 6"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="kontak">
+      <section class="bg-white dark:bg-gray-900">
+        <div
+          class="py-12 sm:py-16 md:py-20 px-4 mx-auto max-w-screen-xl lg:px-6"
+        >
+          <div class="mx-auto max-w-screen-sm text-center">
+            <h2
+              class="mb-4 text-4xl tracking-tight font-extrabold leading-tight text-purple-800 dark:text-white"
+            >
+              Ada pertanyaan atau ingin pesan kue spesial dari BUTTERFUN?
+            </h2>
+            <p
+              class="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-lg"
+            >
+              Klik tombol di bawah ini untuk langsung chat dengan tim kami via
+              WhatsApp. Kami siap membantu kebutuhan kue Anda dengan cepat dan
+              ramah!
+            </p>
+            <button
+              type="button"
+              data-modal-target="crypto-modal"
+              data-modal-toggle="crypto-modal"
+              href="#"
+              class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-700 dark:focus:ring-purple-800"
+            >
+              Hubungi Sekarang
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- FOOTER -->
+    <div>
+      <footer class="bg-purple-700 dark:bg-gray-900">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+          <div class="md:flex md:justify-between">
+            <div class="mb-6 md:mb-0">
+              <img
+                src="/public/butterfun-logo-white.png"
+                class="h-8 me-3"
+                alt="butterfun-logo-white Logo"
+              />
+            </div>
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
+              <div>
+                <h2
+                  class="mb-6 text-sm font-semibold text-white uppercase dark:text-white"
+                >
+                  Social Media
+                </h2>
+                <ul class="text-white dark:text-gray-400 font-medium">
+                  <li class="mb-4">
+                    <a
+                      href="https://www.instagram.com/butterfun.id/"
+                      target="_blank"
+                      class="hover:underline"
+                      >Instagram : @butterfun.id
+                    </a>
+                  </li>
+                  <li>
+                    <p>Email : butterfun.id@gmail.com</p>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h2
+                  class="mb-6 text-sm font-semibold text-white uppercase dark:text-white"
+                >
+                  Pesanan
+                </h2>
+                <ul class="text-white dark:text-gray-400 font-medium">
+                  <li class="mb-4">
+                    <a
+                      href="https://api.whatsapp.com/send?phone=6285887978204"
+                      target="_blank"
+                      class="hover:underline"
+                      >Custome Cake</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://api.whatsapp.com/send?phone=628567324142"
+                      target="_blank"
+                      class="hover:underline"
+                      >Sameday Korean Cake</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr
+            class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+          />
+          <div class="sm:flex sm:items-center sm:justify-between">
+            <span class="text-sm text-white sm:text-center dark:text-gray-400">
+              <p>
+                © Asriyanti Lestari(2360078), Cahya Bintang Gagana
+                Yuliano(2360089), Dea Seinthia Safani(2360096), Hera Nur
+                Azizah(2360142), Shintha Aulia(2360261)
+              </p>
+            </span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/datepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@1.6.5/dist/flowbite.min.js"></script>
+  </body>
+</html>

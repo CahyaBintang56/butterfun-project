@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "builds": [{ "src": "api/server.js", "use": "@vercel/node" }],
+  "routes": [
+    { "src": "/generate-image", "dest": "api/server.js" },
+    { "src": "/", "dest": "/index.html" }
+  ]
+}

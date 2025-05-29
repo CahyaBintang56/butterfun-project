@@ -1,0 +1,23 @@
+{
+  "name": "generate-image",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/js/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "@google/genai": "^1.0.1",
+    "@google/generative-ai": "^0.24.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "flowbite": "^3.1.2"
+  },
+  "devDependencies": {}
+}
