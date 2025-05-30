@@ -1,135 +1,139 @@
 import { GoogleGenAI, Modality } from "@google/genai";
 
 export default async function handler(req, res) {
-  // Set CORS headers
+  // Atur header CORS
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
-  // Handle preflight request
+  // Tangani permintaan preflight OPTIONS
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
 
-  // Only allow POST method
+  // Hanya izinkan metode POST
   if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
+    return res.status(405).json({ error: "Metode tidak diizinkan" });
   }
 
   try {
-    const prompt = req.body.prompt;
-    console.log("Received prompt:", prompt);
+    const permintaan = req.body.prompt;
+    console.log("Prompt diterima:", permintaan);
 
-    if (!prompt) {
-      return res.status(400).json({ error: "Prompt is required" });
+    if (!permintaan) {
+      return res.status(400).json({ error: "Prompt harus diisi" });
     }
 
-    // Check if API key exists
-    // HANYA UNTUK TESTING - JANGAN DI PRODUCTION
+    // Periksa apakah API key tersedia
     const apiKey = process.env.GEMINI_API_KEY;
     console.log(
-      "All env vars:",
+      "Semua variabel lingkungan:",
       Object.keys(process.env).filter((key) => key.includes("GEMINI"))
     );
-    console.log("API Key exists:", !!apiKey);
-    console.log("API Key length:", apiKey ? apiKey.length : 0);
+    console.log("API Key tersedia:", !!apiKey);
+    console.log("Panjang API Key:", apiKey ? apiKey.length : 0);
     console.log(
-      "API Key first 10 chars:",
-      apiKey ? apiKey.substring(0, 10) + "..." : "undefined"
+      "10 karakter pertama API Key:",
+      apiKey ? apiKey.substring(0, 10) + "..." : "tidak ada"
     );
 
     if (!apiKey) {
       return res.status(500).json({
-        error: "API key not configured",
-        message: "GEMINI_API_KEY environment variable is not set",
+        error: "API key belum dikonfigurasi",
+        message: "Variabel lingkungan GEMINI_API_KEY belum disetel",
         debug: {
-          availableEnvVars: Object.keys(process.env).filter((key) =>
+          variabelLingkunganTersedia: Object.keys(process.env).filter((key) =>
             key.includes("GEMINI")
           ),
         },
       });
     }
 
-    // Initialize Gemini AI inside the handler (fresh instance)
+    // Inisialisasi Google GenAI (Gemini)
     const ai = new GoogleGenAI({
       apiKey: apiKey,
     });
 
-    console.log("Calling Gemini API...");
+    console.log("Memanggil API Gemini...");
 
-    // Use the same format as the working local version
-    const response = await ai.models.generateContent({
+    // Kirim permintaan ke model Gemini
+    const respons = await ai.models.generateContent({
       model: "gemini-2.0-flash-preview-image-generation",
-      contents: prompt, // Pass prompt directly like in local version
+      contents: permintaan,
       config: {
         responseModalities: [Modality.TEXT, Modality.IMAGE],
       },
     });
 
-    console.log("Response received from Gemini");
+    console.log("Respons diterima dari Gemini");
 
-    // Check if response has candidates
-    if (!response.candidates || response.candidates.length === 0) {
-      console.log("No candidates in response");
-      return res.status(400).json({ error: "No response from AI" });
+    // Periksa apakah respons memiliki kandidat
+    if (!respons.candidates || respons.candidates.length === 0) {
+      console.log("Tidak ada kandidat dalam respons");
+      return res.status(400).json({ error: "Tidak ada respons dari AI" });
     }
 
-    const candidate = response.candidates[0];
+    const kandidat = respons.candidates[0];
 
-    if (!candidate.content || !candidate.content.parts) {
-      console.log("No content parts in response");
-      return res.status(400).json({ error: "Invalid response structure" });
+    if (!kandidat.content || !kandidat.content.parts) {
+      console.log("Struktur respons tidak valid");
+      return res.status(400).json({ error: "Struktur respons tidak valid" });
     }
 
-    console.log("Processing response parts:", candidate.content.parts.length);
+    console.log(
+      "Memproses bagian dari respons:",
+      kandidat.content.parts.length
+    );
 
-    // Use the same loop structure as local version
-    for (const part of candidate.content.parts) {
-      if (part.inlineData) {
-        console.log("Found image data, size:", part.inlineData.data.length);
+    // Cari bagian yang berisi data gambar
+    for (const bagian of kandidat.content.parts) {
+      if (bagian.inlineData) {
+        console.log(
+          "Ditemukan data gambar, ukuran:",
+          bagian.inlineData.data.length
+        );
 
-        // Return response with the same format as local version
         return res.status(200).json({
-          image: part.inlineData.data,
+          image: bagian.inlineData.data,
         });
       }
     }
 
-    // If no image data found
-    console.log("No image data found in response parts");
-    return res.status(400).json({ error: "No image generated" });
+    // Jika tidak ditemukan data gambar
+    console.log("Tidak ditemukan data gambar dalam respons");
+    return res.status(400).json({ error: "Tidak ada gambar yang dihasilkan" });
   } catch (error) {
-    console.error("Error details:", {
-      message: error.message,
-      stack: error.stack,
-      name: error.name,
+    console.error("Detail error:", {
+      pesan: error.message,
+      jejak: error.stack,
+      nama: error.name,
     });
 
-    // Handle specific Gemini API errors
+    // Tangani error spesifik dari API Gemini
     if (error.message?.includes("API key")) {
       return res.status(401).json({
-        error: "Invalid API key",
-        message: "Please check your Gemini API key configuration",
+        error: "API key tidak valid",
+        message: "Silakan periksa konfigurasi API key Gemini Anda",
       });
     }
 
     if (error.message?.includes("quota") || error.message?.includes("limit")) {
       return res.status(429).json({
-        error: "API quota exceeded",
-        message: "Gemini API quota or rate limit exceeded",
+        error: "Kuota API habis",
+        message: "Kuota atau batas penggunaan API Gemini telah terlampaui",
       });
     }
 
     if (error.message?.includes("timeout")) {
       return res.status(408).json({
-        error: "Request timeout",
-        message: "API request timed out",
+        error: "Permintaan melebihi batas waktu",
+        message: "Permintaan ke API melebihi waktu tunggu",
       });
     }
 
-    // Generic error
+    // Error umum lainnya
     return res.status(500).json({
-      error: "Internal Server Error",
+      error: "Kesalahan Server",
       message: error.message,
     });
   }

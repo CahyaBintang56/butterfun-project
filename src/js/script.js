@@ -1,6 +1,6 @@
 document.getElementById("generateBtn").addEventListener("click", async () => {
+  // Dapatkan nilai dari inputan
   const userPrompt = document.getElementById("prompt").value;
-
   const model = document.getElementById("model").value;
   const warna = document.getElementById("warna").value;
   const bentuk = document.getElementById("bentuk").value;
@@ -8,12 +8,14 @@ document.getElementById("generateBtn").addEventListener("click", async () => {
   const tingkatan = document.getElementById("tingkatan").value;
   const latar = document.getElementById("latar").value;
 
+  // Buat prompt
   const prompt = `Buatkan saya kue ulang tahun dengan tingkatan ${tingkatan} tingkat, dengan model gambar ${model} dimensi, warna ${warna}, bentuk ${bentuk}, toping ${toping}, dan latar ${latar} dan tambahan ${userPrompt}.`;
 
   // Tampilkan modal loading
   const modal = document.getElementById("loadingModal");
   modal.classList.remove("hidden");
 
+  // Dapatkan elemen gambar
   const imgElement = document.getElementById("generatedImage");
   const placeholder = document.getElementById("placeholderText");
   const downloadBtn = document.getElementById("downloadBtn");
@@ -23,6 +25,7 @@ document.getElementById("generateBtn").addEventListener("click", async () => {
   downloadBtn.classList.add("hidden");
   placeholder.classList.remove("hidden");
 
+  // Kirim prompt ke server
   try {
     const res = await fetch("/generate-image", {
       method: "POST",
